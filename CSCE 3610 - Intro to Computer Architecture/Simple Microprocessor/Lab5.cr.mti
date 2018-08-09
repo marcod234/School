@@ -1,0 +1,80 @@
+{C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/sproc.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\marco\Desktop\school\7 - Fall 2017\CSCE 3610\Labs\5\Lab5\sproc.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity sproc
+-- Compiling architecture Behavioral of sproc
+
+} {} {}} {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/div.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/div.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity div
+-- Compiling architecture behav of div
+
+} {} {}} {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/alu_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/alu_tb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity alu_tb
+-- Compiling architecture behavioral of alu_tb
+
+} {} {}} {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/sproc_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/sproc_tb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sproc_tb
+-- Compiling architecture behavioral of sproc_tb
+
+} {} {}} {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/ins_mem.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/ins_mem.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ins_mem
+-- Compiling architecture Behavioral of ins_mem
+
+} {} {}} {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/data_mem.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/data_mem.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity data_mem
+-- Compiling architecture Behavioral of data_mem
+
+} {} {}} {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/regs.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/regs.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity regs
+-- Compiling architecture Behavioral of regs
+
+} {} {}} {C:/Users/marco/Desktop/school/7 - Fall 2017/CSCE 3610/Labs/5/Lab5/alu.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\marco\Desktop\school\7 - Fall 2017\CSCE 3610\Labs\5\Lab5\alu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity alu
+-- Compiling architecture Behavioral of alu
+
+} {} {}}

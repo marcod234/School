@@ -1,0 +1,136 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_SIGNED.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+ 
+Entity alu is
+Generic (
+          DATA_WIDTH    : integer := 16
+);
+Port ( 
+        Clock       : in  STD_LOGIC;
+        Reset       : in  STD_LOGIC;
+        a_in        : in  STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
+        b_in        : in  STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
+        alu_ctrl    : in  STD_LOGIC_VECTOR (3 downto 0);
+        Enable      : in  STD_LOGIC;
+        true_flag   : out STD_LOGIC;
+        Res_out     : out STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0)
+);
+End alu;
+ 
+Architecture Behavioral of alu is
+
+  COMPONENT div  
+    generic(SIZE: INTEGER := 8); 
+    port(reset: in STD_LOGIC; 
+        en: in STD_LOGIC; 
+        clk: in STD_LOGIC; 
+         
+        num: in STD_LOGIC_VECTOR((SIZE - 1) downto 0); 
+        den: in STD_LOGIC_VECTOR((SIZE - 1) downto 0); 
+        res: out STD_LOGIC_VECTOR((SIZE - 1) downto 0); 
+        rm: out STD_LOGIC_VECTOR((SIZE - 1) downto 0) 
+        ); 
+  end COMPONENT; 
+
+  signal res, rm	:std_logic_vector(15 downto 0);
+
+begin
+
+ DIVCOMP: div generic map(16) port map(Reset, Enable, Clock, a_in, b_in, res, rm);
+ 
+  Process (Clock)
+  begin
+
+    if rising_edge(Clock) then
+
+      if Reset = '1' then   -- Clear DataOut on Reset
+        
+        Res_out <= (others => '0');
+		
+      elsif Enable = '1' then
+	  
+        case alu_ctrl is        
+         
+          when x"0" => 
+                                         
+            Res_out <= a_in + b_in;
+
+          when x"1" =>
+
+            Res_out <= a_in - b_in;
+
+          when x"2" =>
+
+            Res_out <= a_in(7 downto 0) * b_in(7 downto 0);
+
+	  when x"3" =>
+ 
+            Res_out <= res;
+
+          when x"4" =>
+
+            Res_out <= a_in AND b_in;
+
+          when x"5" => 
+
+            Res_out <= a_in OR b_in;
+
+          when x"6" =>
+
+            Res_out <= std_logic_vector(shift_left(unsigned(a_in), to_integer(unsigned(b_in))));
+
+          when x"7" =>
+
+            Res_out <= std_logic_vector(shift_right(unsigned(a_in), to_integer(unsigned(b_in))));
+
+          when x"8" =>
+
+           if (a_in = x"0000") then 
+       
+             true_flag <= '1';
+
+           else
+
+             true_flag <= '0';
+          
+           end if;
+
+          when x"9" =>
+
+           if (a_in < x"0000") then 
+       
+             true_flag <= '1';
+
+           else
+
+             true_flag <= '0';
+          
+           end if;
+
+          when x"A" =>
+
+           if (a_in > x"0000") then 
+       
+             true_flag <= '1';
+
+           else
+
+             true_flag <= '0';
+          
+           end if;
+          when others =>
+
+           --Do nothing
+
+        end case;
+
+      end if;
+
+    end if;
+	
+  end process;
+
+End Architecture;
+
