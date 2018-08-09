@@ -1,0 +1,7 @@
+#! /bin/bash
+
+rm proc start system dynamic static *Out
+gcc -o start start.c
+gcc -o system systemPartitioning.c
+gcc -o dynamic dynamicPartitioning.c
+gcc -o static staticPartitioning.c

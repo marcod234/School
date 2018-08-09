@@ -1,0 +1,25 @@
+COMPILE WITH
+gcc -o start start.c
+gcc -o system systemPartitioning.c
+gcc -o dynamic dynamicPartitioning.c
+gcc -o static staticPartitioning.c
+
+##NAMES OF EXECUTABLE FILES MUST BE start, system, dynamic, static##
+
+RUN WITH
+./start
+##system, dynamic, and static are run from start##
+
+VIEW FILES sysOut, dynOut, stOut
+
+
+###########OR##################
+##included script files s and a
+COMPILE WITH
+./s
+
+RUN WITH
+./start
+
+VIEW EXECUTION TIMES WITH
+./a

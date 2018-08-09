@@ -1,0 +1,5 @@
+#! /bin/bash
+
+cat sysOut | grep "seconds"
+cat dynOut | grep "seconds"
+cat stOut  | grep "seconds"
