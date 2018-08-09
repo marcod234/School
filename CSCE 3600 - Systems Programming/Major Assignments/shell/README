@@ -1,0 +1,26 @@
+Marco Duarte
+Alberto Olvera
+Joshua Tews
+
+Design Overview:
+
+The program was separated into 3 parts, which would be used depending on the amount of arguments that it was given, 
+functions that were called interactive, batch and the stderr.  If in the case that the interactive function was called 
+the user would be given the option to type prompt, history or type the commands that it would like to get. The function 
+then after checking for new lines would be redirected to a function that checks for the commands that it was given. 
+It would first fix the lines, this by taking out the semicolons and spaces. 
+It would then read the command and take action upon it. 
+Prompt function would create a new prompt which is what you would give it. 
+Exit would quit the else the function would take those commands to run them thus using the command run function, 
+this which take those commands and uses the system operation to actually run them. 
+if the command line gets 2 arguments variables then the program would be redirected to batch function. 
+The function itself then open a file it would check to see if the file was correctly opened otherwise it would parse the 
+lines inside the actual file, at the end the space would be free.
+
+Specifications:
+
+  The command that it may be given may have different things and thus it might tricked the program, 
+for example when a shell has no commands when the semicolons.  
+This was solved by the implementation by the checking of white spaces. 
+This helps with program to be more aware that in the case of such thing it would still be able to proceed with the correct ouput
+

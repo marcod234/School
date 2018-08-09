@@ -1,0 +1,69 @@
+#================================================================#
+#                         Marco Duarte                           #
+#                    marcoduarte2@my.unt.edu                     #
+#                        CSCE 3600:001                           #
+#                      February, 16, 2016                        #
+#                                                                #
+#  This bash script iterates from value (start) by rate (step)   #
+#  until ending value (stop) is reached or gotten close to       #
+#                                                                #
+#================================================================#
+
+#! /bin/bash
+
+add() # stop > start, step is positive
+{
+	let stop+=1 # add 1 to stop so inital stop value is reached in the loop
+	while [ $start -ne $stop ]
+	do
+		echo $start
+		let start+=step #increment start by step
+		if [ $start -gt $stop ]; then
+			let start=0+stop #allows loop to exit when start becomes > start
+		fi
+	done		
+}
+
+sub() # stop < start, step is negative
+{
+	let step*=-1
+        let stop-=1
+
+        while [ $start -ne $stop ]
+        do
+                echo $start
+                let start+=step
+                if [ $start -lt $stop ]; then
+                        let start=0+stop
+		fi
+        done
+
+}
+
+start=1 #default values for start and stop
+step=1
+
+if [[ $# -eq 0 || $# -gt 3 ]]; then #0 parameters or more than 3
+	echo usage: myseq [start] stop [step]
+	
+else
+        if [ $# -eq 1 ]; then #set stop, 1 param 
+                stop=$1
+
+        elif [ $# -eq 2 ]; then #set start and stop, 2 params
+                start=$1
+                stop=$2
+
+        else			#set all 3, 3 params
+                start=$1
+                stop=$2
+                step=$3
+        fi
+
+	if [ $stop -lt $start ]; then # stop < start
+		sub
+
+	else
+		add
+	fi
+fi
