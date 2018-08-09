@@ -1,2 +1,2 @@
 # School
-All or most of my school assignments / projects. Please don't copy :)
+Some of my cooler school assignments / projects. Please don't copy :)
